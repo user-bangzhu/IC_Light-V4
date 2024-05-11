@@ -31,7 +31,7 @@ IC-Light 是一个控制图像照明的项目。
 
 ---
 
-**Prompt: beautiful woman, detailed face, warm atmosphere, at home, bedroom**
+**提示：美丽的女人，细致的脸，温暖的气氛，在家，卧室**
 
 Lighting Preference: Left
 
@@ -39,7 +39,7 @@ Lighting Preference: Left
 
 ---
 
-**Prompt: beautiful woman, detailed face, sunshine from window**
+**提示：美丽的女人，细致的脸，窗外的阳光**
 
 Lighting Preference: Left
 
@@ -47,7 +47,7 @@ Lighting Preference: Left
 
 ---
 
-**beautiful woman, detailed face, neon, Wong Kar-wai, warm**
+**美丽的女人，细致的脸庞，霓虹灯，王家卫，温暖**
 
 Lighting Preference: Left
 
@@ -55,7 +55,7 @@ Lighting Preference: Left
 
 ---
 
-**Prompt: beautiful woman, detailed face, sunshine, outdoor, warm atmosphere**
+**提示：美女、细致的脸庞、阳光、户外、温馨的氛围**
 
 Lighting Preference: Right
 
@@ -63,7 +63,7 @@ Lighting Preference: Right
 
 ---
 
-**Prompt: beautiful woman, detailed face, sunshine, outdoor, warm atmosphere**
+**提示：美女、细致的脸庞、阳光、户外、温馨的氛围**
 
 Lighting Preference: Left
 
@@ -71,7 +71,7 @@ Lighting Preference: Left
 
 ---
 
-**Prompt: beautiful woman, detailed face, sunshine from window**
+**提示：美丽的女人，细致的脸，窗外的阳光**
 
 Lighting Preference: Right
 
@@ -79,7 +79,7 @@ Lighting Preference: Right
 
 ---
 
-**Prompt: beautiful woman, detailed face, shadow from window**
+**提示：美丽的女人，细致的脸，窗外的影子**
 
 Lighting Preference: Left
 
@@ -87,7 +87,7 @@ Lighting Preference: Left
 
 ---
 
-**Prompt: beautiful woman, detailed face, sunset over sea**
+**提示：美丽的女人，细致的脸，海上的日落**
 
 Lighting Preference: Right
 
@@ -95,7 +95,7 @@ Lighting Preference: Right
 
 ---
 
-**Prompt: handsome boy, detailed face, neon light, city**
+**提示：帅气的男孩，细致的脸庞，霓虹灯，城市**
 
 Lighting Preference: Left
 
@@ -103,19 +103,19 @@ Lighting Preference: Left
 
 ---
 
-**Prompt: beautiful woman, detailed face, light and shadow**
+**提示：美丽的女人，细致的脸庞，光影**
 
 Lighting Preference: Left
 
 ![image](https://github.com/lllyasviel/IC-Light/assets/19834515/706f70a8-d1a0-4e0b-b3ac-804e8e231c0f)
 
-(beautiful woman, detailed face, soft studio lighting)
+（美丽的女人，细致的脸，柔和的工作室灯光）
 
 ![image](https://github.com/lllyasviel/IC-Light/assets/19834515/fe0a72df-69d4-4e11-b661-fb8b84d0274d)
 
 ---
 
-**Prompt: Buddha, detailed face, sci-fi RGB glowing, cyberpunk**
+**提示：佛像、细致的脸部、科幻RGB发光、赛博朋克**
 
 Lighting Preference: Left
 
@@ -123,7 +123,7 @@ Lighting Preference: Left
 
 ---
 
-**Prompt: Buddha, detailed face, natural lighting**
+**提示：佛像、面部细节、自然采光**
 
 Lighting Preference: Left
 
@@ -131,7 +131,7 @@ Lighting Preference: Left
 
 ---
 
-**Prompt: toy, detailed face, shadow from window**
+**提示：玩具、详细的脸部、窗户的阴影**
 
 Lighting Preference: Bottom
 
@@ -139,7 +139,7 @@ Lighting Preference: Bottom
 
 ---
 
-**Prompt: toy, detailed face, sunset over sea**
+**提示：玩具、细致的面孔、海上日落**
 
 Lighting Preference: Right
 
@@ -147,7 +147,7 @@ Lighting Preference: Right
 
 ---
 
-**Prompt: dog, magic lit, sci-fi RGB glowing, studio lighting**
+**提示：狗、魔法灯光、科幻 RGB 发光、工作室灯光**
 
 Lighting Preference: Bottom
 
@@ -155,7 +155,7 @@ Lighting Preference: Bottom
 
 ---
 
-**Prompt: mysteriou human, warm atmosphere, warm atmosphere, at home, bedroom**
+**提示：神秘的人类、温馨的氛围、温馨的氛围、在家、卧室**
 
 Lighting Preference: Right
 

@@ -628,7 +628,7 @@ class BGSource(Enum):
 block = gr.Blocks().queue()
 with block:
     with gr.Row():
-        gr.Markdown(""" 完整的AI学习教程，最新最快的AI资讯，请关注匹夫网站：AI.cenn.com
+        gr.Markdown(""" 完整的AI学习教程，最新最快的AI资讯，请关注匹夫网站：http://AI.cenn.com
         ### 如需帮助请联系匹夫微信：AI-pifu """)
     with gr.Row():
         with gr.Column():

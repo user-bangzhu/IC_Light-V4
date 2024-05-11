@@ -1,14 +1,14 @@
 # IC-Light
 
-IC-Light is a project to manipulate the illumination of images.
+IC-Light 是一个控制图像照明的项目。
 
-The name "IC-Light" stands for **"Imposing Consistent Light"** (we will briefly describe this at the end of this page).
+“IC-Light”这个名称代表“Impose Constant Light”（我们将在本页末尾简要描述这一点）。
 
-Currently, we release two types of models: text-conditioned relighting model and background-conditioned model. Both types take foreground images as inputs.
+目前，我们发布了两种类型的模型：文本条件重新光照模型和背景条件模型。两种类型都将前景图像作为输入。
 
-# Get Started
+# 开始使用
 
-Below script will run the text-conditioned relighting model:
+请按下面命令依次运行
 
     git clone https://github.com/lllyasviel/IC-Light.git
     cd IC-Light
@@ -18,19 +18,16 @@ Below script will run the text-conditioned relighting model:
     pip install -r requirements.txt
     python gradio_demo.py
 
-Or, to use background-conditioned demo:
+使用背景运行
 
     python gradio_demo_bg.py
 
-Model downloading is automatic.
+模行会自动下载
 
-Note that the "gradio_demo.py" has an official [huggingFace Space here](https://huggingface.co/spaces/lllyasviel/IC-Light).
 
-# Screenshot
 
-### Text-Conditioned Model
+# 实列
 
-(Note that the "Lighting Preference" are just initial latents - eg., if the Lighting Preference is "Left" then initial latent is left white right black.)
 
 ---
 
@@ -166,9 +163,9 @@ Lighting Preference: Right
 
 ---
 
-### Background-Conditioned Model
+### 自定背景条件模型
 
-The background conditioned model does not require careful prompting. One can just use simple prompts like "handsome man, cinematic lighting".
+背景条件模型不需要很明确的提示。只需使用“帅哥、电影灯光”等简单提示即可。
 
 ---
 
@@ -182,35 +179,26 @@ The background conditioned model does not require careful prompting. One can jus
 
 ---
 
-A more structured visualization:
+# 说明
 
-![r1](https://github.com/lllyasviel/IC-Light/assets/19834515/c1daafb5-ac8b-461c-bff2-899e4c671ba3)
+在 HDR 空间中，照明具有所有光传输都是独立的属性。
 
-# Imposing Consistent Light
-
-In HDR space, illumination has a property that all light transports are independent. 
-
-As a result, the blending of appearances of different light sources is equivalent to the appearance with mixed light sources:
+因此，不同光源的外观混合相当于混合光源的外观：
 
 ![cons](https://github.com/lllyasviel/IC-Light/assets/19834515/27c67787-998e-469f-862f-047344e100cd)
 
-Using the above [light stage](https://www.pauldebevec.com/Research/LS/) as an example, the two images from the "appearance mixture" and "light source mixture" are consistent (mathematically equivalent in HDR space, ideally).
-
-We imposed such consistency (using MLPs in latent space) when training the relighting models.
-
-As a result, the model is able to produce highly consistent relight - **so** consistent that different relightings can even be merged as normal maps! Despite the fact that the models are latent diffusion.
-
+以上面的灯光阶段为例，来自“外观混合”和“光源混合”的两个图像是一致的（理想情况下，在 HDR 空间中数学上等效）。
 ![r2](https://github.com/lllyasviel/IC-Light/assets/19834515/25068f6a-f945-4929-a3d6-e8a152472223)
 
-From left to right are inputs, model outputs relighting, devided shadow image, and merged normal maps. Note that the model is not trained with any normal map data. This normal estimation comes from the consistency of relighting.
+从左到右依次是输入、模型输出、重新照明、分割的阴影图像和合并的法线贴图。请注意，该模型未使用任何法线贴图数据进行训练。这个正常的估计来自于重新点亮的一致性。
 
-You can reproduce this experiment using this button (it is 4x slower because it relight image 4 times)
+您可以使用此按钮重现此实验（速度慢 4 倍，因为它重新点亮图像 4 次）
 
 ![image](https://github.com/lllyasviel/IC-Light/assets/19834515/d9c37bf7-2136-446c-a9a5-5a341e4906de)
 
 ![image](https://github.com/lllyasviel/IC-Light/assets/19834515/fcf5dd55-0309-4e8e-9721-d55931ea77f0)
 
-Below are bigger images (feel free to try yourself to get more results!)
+以下是更大的图像（请随意尝试以获得更多结果！）
 
 ![image](https://github.com/lllyasviel/IC-Light/assets/19834515/12335218-186b-4c61-b43a-79aea9df8b21)
 
@@ -224,15 +212,15 @@ And, [switchlight](https://arxiv.org/pdf/2402.18848) (switchlight is another gre
 
 ![image](https://github.com/lllyasviel/IC-Light/assets/19834515/fbdd961f-0b26-45d2-802e-ffd734affab8)
 
-# Model Notes
+# 模型说明
 
-* **iclight_sd15_fc.safetensors** - The default relighting model, conditioned on text and foreground. You can use initial latent to influence the relighting.
+* **iclight_sd15_fc.safetensors** -  默认的重新照明模型，以文本和前景为条件。您可以使用初始潜伏来影响重新照明。
 
-* **iclight_sd15_fcon.safetensors** - Same as "iclight_sd15_fc.safetensors" but trained with offset noise. Note that the default "iclight_sd15_fc.safetensors" outperform this model slightly in a user study. And this is the reason why the default model is the model without offset noise.
+* **iclight_sd15_fcon.safetensors** - 与“iclight_sd15_fc.safetensors”相同，但使用偏移噪声进行训练。请注意，在用户研究中，默认的“iclight_sd15_fc.safetensors”稍微优于此模型。这就是为什么默认模型是没有偏移噪声的模型的原因。
 
-* **iclight_sd15_fbc.safetensors** - Relighting model conditioned with text, foreground, and background.
+* **iclight_sd15_fbc.safetensors** -  以文本、前景和背景为条件的重新照明模型。
 
-# Cite
+# 引用
 
     @Misc{iclight,
       author = {Lvmin Zhang and Anyi Rao and Maneesh Agrawala},
@@ -240,7 +228,7 @@ And, [switchlight](https://arxiv.org/pdf/2402.18848) (switchlight is another gre
       year   = {2024},
     }
 
-# Related Work
+# 相关工作
 
 Also read ...
 

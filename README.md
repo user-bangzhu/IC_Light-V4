@@ -10,7 +10,7 @@ IC-Light 是一个控制图像照明的项目。
 
 请按下面命令依次运行
 
-    git clone https://github.com/lllyasviel/IC-Light.git
+    git clone https://github.com/user-bangzhu/IC_Light-V4.git
     cd IC-Light
     conda create -n iclight python=3.10
     conda activate iclight
